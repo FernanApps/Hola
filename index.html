@@ -15,7 +15,11 @@
 		.then(
 			text => {
 			console.log(text);
-			document.getElementById('text').textContent = text
+			document.getElementById('text').textContent = text;
+			var currentUrl = document.URL;
+
+			window.location.replace("${currentUrl}/hola");
+
 			
 			}		
 		)
