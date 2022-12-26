@@ -1,0 +1,30 @@
+<html>  
+<head>  
+<script type = "text/javascript">  
+	function myfunction() {   
+	alert("how are you"); 
+	}  
+	function other(){
+		fetch('https://reqbin.com/echo/get/json', {
+			method: 'GET',
+			headers: {
+				'Accept': 'application/json',
+			},
+		})
+		.then(response => response.text())
+		.then(
+			text => {
+			console.log(text);
+			document.getElementById('text').textContent = text
+			
+			}		
+		)
+	}
+	other();
+</script>  
+</head>  
+<body>  
+	<p id="text">Click the following button to see the function in action</p>  
+	<input type = "button" onclick = "other()" value = "Display">  
+</body>  
+</html>  
